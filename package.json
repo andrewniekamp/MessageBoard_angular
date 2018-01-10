@@ -1,7 +1,7 @@
 {
   "name": "messageboard",
   "version": "1.0.0",
-  "description": "The Fairygodboss message board",
+  "description": "Angular Message Board",
   "engines": {
     "node": ">= 7.0.0"
   },
@@ -21,6 +21,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.12",
     "axios": "^0.15.3",
     "body-parser": "^1.16.1",
     "compression": "^1.7.1",

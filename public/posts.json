@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Some title",
+        "body": "Some body",
+        "excerpt": "Some excerpt",
+        "user": "Some user",
+        "date": "01/01/2018"
+    },
+    {
+        "id": 1,
+        "title": "Another title",
+        "body": "Another body",
+        "excerpt": "Another excerpt",
+        "user": "Another user",
+        "date": "02/02/2018"
+    },
+    {
+        "id": 1,
+        "title": "Different title",
+        "body": "Different body",
+        "excerpt": "Different excerpt",
+        "user": "Different user",
+        "date": "03/03/2018"
+    },
+    {
+        "id": 1,
+        "title": "Last title",
+        "body": "Last body",
+        "excerpt": "Last excerpt",
+        "user": "Last user",
+        "date": "04/04/2018"
+    }
+]
