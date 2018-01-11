@@ -4,21 +4,16 @@
 
     function postsFactory($http) {
         function getAll() {
-            return $http.get("../posts.json")
+            return $http.get("/api/posts")
             .then(function(res) {
                 return res.data;
             });
         }
         function findById(id) {
-            var foundPost = {};
-            return $http.get("../posts.json")
+            // Better to store the data locally, or do another get to DB?
+            return $http.get("/api/posts/" + id)
             .then(function(res) {
-                res.data.forEach(function(post) {
-                    if (parseInt(id) === post.id) {
-                        foundPost = post;
-                    }
-                });
-                return foundPost;
+                return res.data;
             });
         }
         function addPost(newPost) {
