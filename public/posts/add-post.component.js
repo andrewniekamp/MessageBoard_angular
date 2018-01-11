@@ -1,5 +1,5 @@
 (function() {
-    angular.module('app.addPost', [])
+    angular.module('app.posts')
     .component('addPost', {
         templateUrl: '/posts/add-post.component.html',
         controllerAs: 'vm',

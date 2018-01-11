@@ -1,5 +1,5 @@
 (function() {
-    angular.module('posts', [])
+    angular.module('app.posts')
     .factory('posts', postsFactory);
 
     function postsFactory($http) {

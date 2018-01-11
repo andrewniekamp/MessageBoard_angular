@@ -1,5 +1,5 @@
 (function() {
-    angular.module('app.singlePost', [])
+    angular.module('app.posts')
     .component('singlePost', {
         templateUrl: '/posts/single-post.component.html',
         controllerAs: 'vm',
