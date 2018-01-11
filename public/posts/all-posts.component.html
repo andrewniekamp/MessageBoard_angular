@@ -1,4 +1,4 @@
-<a ng-repeat="post in vm.posts">
+<div ng-repeat="post in vm.posts">
     <div class="post">
         <div class="post-content">
             <div class="post-content-title">{{post.title}}</div>
@@ -10,6 +10,6 @@
                 <div class="post-content-date">Last Update: {{post.date}}</div>
             </div>
         </div>
-        <div class="post-arrow">></div>
+        <div class="post-arrow"><button ui-sref="singlePost({ id: post.id })">></button></div>
     </div>
-</a>
+</div>

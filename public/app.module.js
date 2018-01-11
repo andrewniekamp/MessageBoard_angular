@@ -7,7 +7,7 @@
         'posts',
 
         //Other
-        'app.allPosts'
-        // 'app.message'
+        'app.allPosts',
+        'app.singlePost'
     ]);
 }());

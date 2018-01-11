@@ -11,12 +11,15 @@
         }
         function findById(id) {
             var foundPost = {};
-            posts.forEach(function(post) {
-                if (parseInt(id) === post.postId) {
-                    foundPost = post;
-                }
+            return $http.get("../posts.json")
+            .then(function(res) {
+                res.data.forEach(function(post) {
+                    if (parseInt(id) === post.id) {
+                        foundPost = post;
+                    }
+                });
+                return foundPost;
             });
-            return foundPost;
         }
         return {
             getAll: getAll,
