@@ -15,7 +15,7 @@
                 posts.addPost(newPost)
                 .then(function() {
                     $state.go('allPosts');
-                })
+                });
             };
         }
     });
