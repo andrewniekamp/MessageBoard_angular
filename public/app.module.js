@@ -1,11 +1,13 @@
 (function() {
+    'use strict';
+    
     angular.module('app', [
         //Shared
-        'app.config',
+        'app.core',
         'posts',
 
         //Other
-        'app.allPosts',
+        'app.allPosts'
         // 'app.message'
     ]);
 }());

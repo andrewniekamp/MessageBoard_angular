@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html>
   <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width initial-scale=1.0'>
@@ -7,22 +7,26 @@
     <link rel="stylesheet" href="/style.css" />
     <!-- <script defer src="/bundle.js"></script> -->
   </head>
-  <body>
+  <body ng-app="app">
+    
+    <a ui-sref="allPosts">See all posts</a>
     
     <div class="app">
       <h1 class="title">The Message Board</h1>
       <!-- To move later -->
-      <all-posts></all-posts>
-      <ui-router></ui-router>
+      <!-- <all-posts></all-posts> -->
+      <ui-view></ui-view>
+      <!-- <all-posts></all-posts> -->
     </div>
 
     <script src="/angular.js"></script>
     <script src="/angular-ui-router.min.js"></script>
     <script src="/app.module.js"></script>
+    <script src="/core/app.core.js"></script>
     <script src="/core/config.js"></script>
 
-    <script src="/posts/all-posts.component.js"></script>
     <script src="/posts/posts.factory.js"></script>
+    <script src="/posts/all-posts.component.js"></script>
   </body>
 </html>
 
