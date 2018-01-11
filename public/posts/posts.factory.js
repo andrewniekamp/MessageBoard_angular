@@ -17,8 +17,7 @@
             });
         }
         function addPost(newPost) {
-            return $http.post('/api/posts', newPost)
-            .then(console.log);
+            return $http.post('/api/posts', newPost);
         }
         return {
             getAll: getAll,

@@ -3,7 +3,7 @@
     .component('addPost', {
         templateUrl: '/posts/add-post.component.html',
         controllerAs: 'vm',
-        controller: function(posts) {
+        controller: function(posts, $state) {
             var vm = this;
             vm.addPost = function() {
                 var newPost = {
@@ -12,7 +12,10 @@
                     user: vm.user,
                     date: Date.now()
                 };
-                posts.addPost(newPost);
+                posts.addPost(newPost)
+                .then(function() {
+                    $state.go('allPosts');
+                })
             };
         }
     });
