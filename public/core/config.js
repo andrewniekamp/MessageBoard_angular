@@ -3,6 +3,11 @@
 
     angular.module('app.core')
     .config(function($stateProvider) {
+        var homeState = {
+            name: "home",
+            url: "",
+            component: "home"
+        };
         var allPostsState = {
             name: "allPosts",
             url: "/posts",
@@ -13,6 +18,7 @@
             url: "/posts/{id}",
             component: "singlePost"
         };
+        $stateProvider.state(homeState);
         $stateProvider.state(allPostsState);
         $stateProvider.state(singlePost);
     });

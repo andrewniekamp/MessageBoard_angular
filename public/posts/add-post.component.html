@@ -1,0 +1,26 @@
+<button ng-click="isFormOpen = !isFormOpen">Add Post</button>
+<form ng-show="isFormOpen">
+    <p>this is the form</p>
+    <input placeholder="this is the input" />
+    <div class="main">
+        <h2 class="addpost-title">Create a new post:</h2>
+        <form class="form" onSubmit={handleSubmit}>
+            <div class="form-group">
+                <label htmlFor="title">Title</label>
+                <input class="form-control" type="text" name="title" required />
+                <label htmlFor="body">Message</label>
+                <textarea class="form-control" type="text" name="body" rows="4" cols="50" placeholder="Enter your post's text here." />
+                <label htmlFor="user">User</label>
+                <input class="form-control" type="text" name="user" required />
+            </div>
+            <div class="form-group">
+                <div class="buttons">
+                    <button class="addpost-button" type="cancel">
+                        <Link to="/">Cancel</Link>
+                    </button>
+                    <button type="submit" class="addpost-button">Create Post</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</form>

@@ -7,7 +7,9 @@
         'posts',
 
         //Other
+        'app.home',
         'app.allPosts',
-        'app.singlePost'
+        'app.singlePost',
+        'app.addPost'
     ]);
 }());
