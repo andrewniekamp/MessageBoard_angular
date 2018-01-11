@@ -101,6 +101,16 @@ form input, textarea {
   border: 1px solid black;
 }
 
+.center {
+  text-align: center;
+}
+
+.app-button {
+  margin: 1%;
+  padding: 10px;
+  border: 1px solid black;
+}
+
 /* ------- App ------- */
 
 .app {

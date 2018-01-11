@@ -13,13 +13,13 @@
             url: "/posts",
             component: "allPosts"
         };
-        var singlePost = {
+        var singlePostState = {
             name: "singlePost",
             url: "/posts/{id}",
             component: "singlePost"
         };
         $stateProvider.state(homeState);
         $stateProvider.state(allPostsState);
-        $stateProvider.state(singlePost);
+        $stateProvider.state(singlePostState);
     });
 }());

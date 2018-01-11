@@ -21,9 +21,14 @@
                 return foundPost;
             });
         }
+        function addPost(newPost) {
+            return $http.post('/api/posts', newPost)
+            .then(console.log);
+        }
         return {
             getAll: getAll,
-            findById: findById
+            findById: findById,
+            addPost: addPost
         };
     }
 }());
