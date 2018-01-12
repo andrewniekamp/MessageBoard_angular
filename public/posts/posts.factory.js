@@ -13,6 +13,7 @@
             // Better to store the data locally, or do another get to DB?
             return $http.get("/api/posts/" + id)
             .then(function(res) {
+                // res.data.date = moment(res.date);
                 return res.data;
             });
         }
