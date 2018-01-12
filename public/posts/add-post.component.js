@@ -12,7 +12,7 @@
                     user: vm.user,
                     date: Date.now()
                 };
-                posts.addPost(newPost)
+                posts.add(newPost)
                 .then(function() {
                     $state.go('allPosts');
                 });

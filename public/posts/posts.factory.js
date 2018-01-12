@@ -10,20 +10,22 @@
             });
         }
         function findById(id) {
-            // Better to store the data locally, or do another get to DB?
             return $http.get("/api/posts/" + id)
             .then(function(res) {
-                // res.data.date = moment(res.date);
                 return res.data;
             });
         }
-        function addPost(newPost) {
+        function add(newPost) {
             return $http.post('/api/posts', newPost);
+        }
+        function update(post) {
+            return $http.put('/api/posts/' + post.id, post);
         }
         return {
             getAll: getAll,
             findById: findById,
-            addPost: addPost
+            add: add,
+            update: update
         };
     }
 }());

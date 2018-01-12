@@ -14,6 +14,17 @@ router.post('/', (req, res, next) => {
     .catch(next)
 })
 
+router.put('/:id', (req, res, next)=>{
+	Post.findById(req.params.id)
+	.then(foundPost =>{
+		foundPost.update(req.body)
+	})
+	.then(updatedPost =>{
+		res.json(updatedPost)
+	})
+	.catch(next)
+})
+
 router.get('/:id', (req, res, next) => {
   Post.findById(req.params.id)
     .then(post => res.json(post))

@@ -15,12 +15,15 @@
         <div class="single-post-message">{{vm.post.body}}</div>
         <hr />
         <div class="replies-title">Responses:</div>
-        <PostReplies postId={{postId}} />
+        <!-- <PostReplies postId={{postId}} /> -->
         <hr />
-        <AddReply postId={{postId}} />
+        <!-- <AddReply postId={{postId}} /> -->
         <div class="single-post-button-mobile">
             <hr />
             <a ui-sref="allPosts"><button>Back to Posts</button></a>
         </div>
+    </div>
+    <div class="center">
+        <edit-post post="vm.post"></edit-post>
     </div>
 </div>
