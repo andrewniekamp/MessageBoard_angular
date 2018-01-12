@@ -1,7 +1,7 @@
 (function() {
     angular.module('app.posts')
     .component('allPosts', {
-        templateUrl: '/posts/all-posts.component.html',
+        templateUrl: '/posts/all-posts/all-posts.component.html',
         controllerAs: 'vm',
         controller: function(posts) {
             var vm = this;

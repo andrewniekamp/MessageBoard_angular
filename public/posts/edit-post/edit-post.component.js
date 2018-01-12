@@ -4,7 +4,7 @@
             bindings: {
                 post: "<"
             },
-            templateUrl: '/posts/edit-post.component.html',
+            templateUrl: '/posts/edit-post/edit-post.component.html',
             controllerAs: 'vm',
             controller: function (posts, $state) {
                 var vm = this;

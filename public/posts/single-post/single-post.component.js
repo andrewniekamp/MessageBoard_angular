@@ -1,7 +1,7 @@
 (function() {
     angular.module('app.posts')
     .component('singlePost', {
-        templateUrl: '/posts/single-post.component.html',
+        templateUrl: '/posts/single-post/single-post.component.html',
         controllerAs: 'vm',
         controller: function(posts, $stateParams) {
             var vm = this;

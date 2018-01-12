@@ -1,7 +1,7 @@
 (function() {
     angular.module('app.posts')
     .component('addPost', {
-        templateUrl: '/posts/add-post.component.html',
+        templateUrl: '/posts/add-post/add-post.component.html',
         controllerAs: 'vm',
         controller: function(posts, $state) {
             var vm = this;

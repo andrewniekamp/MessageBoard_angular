@@ -1,5 +1,10 @@
 (function() {
     'use strict';
     
-    angular.module('app.posts', []);
+    angular.module('app.posts', [
+        'allPosts',
+        'addPost',
+        'editPost',
+        'singlePost'
+    ]);
 }());
