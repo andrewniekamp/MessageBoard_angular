@@ -1,4 +1,4 @@
-<div ng-repeat="post in vm.posts">
+<div ng-repeat="post in vm.posts | orderBy: '-date'">
     <a ui-sref="singlePost({ id: post.id })">
         <div class="post">
             <div class="post-content">

@@ -8,7 +8,7 @@
             vm.$onInit = function() {
                 posts.findById($stateParams.id)
                 .then(function(response) {
-                    response.date = moment(response.date).format("MMM. DD, YYYY");
+                    response.date = moment(response.date).format("MMM. DD, YYYY HH:MM:SS");
                     vm.post = response;
                 });
             };

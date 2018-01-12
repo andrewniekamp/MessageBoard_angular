@@ -9,7 +9,7 @@
                 posts.getAll()
                 .then(function(response) {
                     response.forEach(function(post) {
-                        post.date = moment(post.date).format("MMM. DD, YYYY");
+                        post.date = moment(post.date).format("MMM. DD, YYYY HH:MM:SS");
                     });
                     vm.posts = response;
                 });
