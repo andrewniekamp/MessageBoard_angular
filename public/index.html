@@ -7,21 +7,26 @@
     <link rel="stylesheet" href="/angular-material.css" />
     <link rel="stylesheet" href="/style.css" />
     <!-- <script defer src="/bundle.js"></script> -->
+    <base href="/">
   </head>
-  <body ng-app="app">
+  <body ng-app="app" ng-cloak>
 
-      <md-content layout-padding>
-          <div layout="row" layout-align="center" flex>
-              <md-button class="md-fab md-primary" ui-sref="home">
-                  Home
-              </md-button>
-          </div>
-      </md-content>
+    <md-content layout-padding class="bg-white">
+        <div layout="row" layout-align="center" flex>
+            <md-button class="md-fab md-primary" ui-sref="home">
+                Home
+            </md-button>
+        </div>
+    </md-content>
 
-    <div class="app">
-      <h1 class="title">The Message Board</h1>
-      <ui-view></ui-view>
-    </div>
+    <md-card>
+      <md-card-title>
+          <h1 class="center">The Message Board</h1>
+      </md-card-title>
+      <md-card-content>
+            <ui-view></ui-view>
+      </md-card-content>
+    </md-card>
 
     <script src="/angular.js"></script>
     <script src="/angular-ui-router.min.js"></script>

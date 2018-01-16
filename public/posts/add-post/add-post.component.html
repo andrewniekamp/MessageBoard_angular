@@ -1,25 +1,47 @@
 
 <div class="center">
-    <button ng-show="!isFormOpen" class="app-button" ng-click="isFormOpen = !isFormOpen">Add Post</button>
-    <button ng-hide="!isFormOpen" class="app-button" ng-click="isFormOpen = !isFormOpen">Cancel</button>
+    <md-content layout-padding class="bg-white">
+        <div layout="row" layout-align="center" flex>
+            <md-button ng-show="!isFormOpen" class="md-fab md-primary" ng-click="isFormOpen = !isFormOpen">
+                Add
+            </md-button>
+            <md-button ng-hide="!isFormOpen" class="md-fab md-secondary" ng-click="isFormOpen = !isFormOpen">
+                X
+            </md-button>
+        </div>
+    </md-content>
 </div>
-<form ng-show="isFormOpen" ng-submit="vm.addPost()">
-    <div class="main">
-        <h2 class="addpost-title">Create a new post:</h2>
-        <form class="form">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input ng-model="vm.title" class="form-control" type="text" name="title" required />
-                <label for="body">Message</label>
-                <textarea ng-model="vm.body" class="form-control" type="text" name="body" rows="4" cols="50" placeholder="Enter your post's text here."></textarea>
-                <label for="user">User</label>
-                <input ng-model="vm.user" class="form-control" type="text" name="user" required />
+<md-content layout-padding ng-show="isFormOpen">
+    <h2 class="center">Add a New Note</h2>
+    <md-divider></md-divider>
+    <form name="postForm" ng-submit="vm.addPost()">
+        <div layout-gt-xs="row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>User</label>
+                <!-- Need to manually reset the form -->
+                <input name="user" ng-model="vm.user" required>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Title</label>
+                <!-- Need to manually reset the form -->
+                <input name="title" ng-model="vm.title" required>
+            </md-input-container>
+        </div>
+        <div layout-gt-xs="row">
+            <md-input-container class="md-block" flex-gt-xs>
+                <label>Body</label>
+                <!-- Need to manually reset the form -->
+                <textarea name="body" ng-model="vm.body" required></textarea>
+            </md-input-container>
+        </div>
+            <div class="md-actions">
+                <md-button
+                    class="md-primary md-raised date-row"
+                    type="submit"
+                    ng-disabled="postForm.$invalid">
+                    Add
+                </md-button>
             </div>
-            <div class="form-group">
-                <div class="buttons">
-                    <button type="submit" class="addpost-button">Create Post</button>
-                </div>
-            </div>
-        </form>
-    </div>
-</form>
+        </div>
+    </form>
+</md-content>

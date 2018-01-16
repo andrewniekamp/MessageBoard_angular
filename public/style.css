@@ -103,6 +103,8 @@ form input, textarea {
 
 .center {
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .app-button {
@@ -289,4 +291,8 @@ md-divider {
 
 .single-post-text {
   margin: 0;
+}
+
+.bg-white {
+  background-color: white !important;
 }

@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('app.core')
-    .config(function($stateProvider) {
+    .config(function($stateProvider, $locationProvider) {
         var homeState = {
             name: "home",
             url: "",
@@ -21,5 +21,6 @@
         $stateProvider.state(homeState);
         $stateProvider.state(allPostsState);
         $stateProvider.state(singlePostState);
+        $locationProvider.html5Mode(true);
     });
 }());
