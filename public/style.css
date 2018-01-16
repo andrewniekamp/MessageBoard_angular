@@ -272,3 +272,21 @@ form input, textarea {
   border: 1px solid black;
   width: 100%;
 }
+
+/* AngularJS Material */
+md-grid-tile {
+  transition: all 400ms ease-out 50ms;
+}
+
+md-divider {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.md-list-item-text {
+  padding: 10px;
+}
+
+.single-post-text {
+  margin: 0;
+}
