@@ -5,7 +5,6 @@
         controllerAs: 'vm',
         controller: function(posts, NgTableParams) {
             var vm = this;
-            vm.sort = '';
             vm.$onInit = function() {
                 posts.getAll()
                 .then(function(response) {

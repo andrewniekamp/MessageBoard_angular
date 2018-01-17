@@ -8,13 +8,12 @@
                     <md-content ng-cloak>
                         <md-list flex>
                             <md-divider></md-divider>
-                            <a ng-repeat="post in vm.posts" ui-sref="singlePost({ id: post.id })">
+                            <a ng-repeat="post in vm.posts | orderBy: '-date'" ui-sref="singlePost({ id: post.id })">
                                 <md-list-item class="md-3-line" ng-click="null">
                                     <div class="md-list-item-text" layout="column">
-                                        <h3>{{ post.title }}</h3>
-                                        <h4>{{ post.user }}</h4>
-                                        <p>Last Update: {{post.date}}</p>
-                                        <p># of comments placeholder</p>
+                                        <h3>Title: {{ post.title }}</h3>
+                                        <h4>User: {{ post.user }}</h4>
+                                        <p>Last Updated: {{post.date}}</p>
                                     </div>
                                     <md-divider></md-divider>
                                 </md-list-item>

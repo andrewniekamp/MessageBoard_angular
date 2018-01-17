@@ -11,9 +11,9 @@
                 vm.editPost = function () {
                     var editedPost = {
                         id: vm.post.id,
-                        title: vm.title,
-                        body: vm.body,
-                        user: vm.user,
+                        title: vm.newTitle || vm.title,
+                        body: vm.newBody || vm.body,
+                        user: vm.newUser || vm.user,
                         date: Date.now()
                     };
                     posts.update(editedPost)

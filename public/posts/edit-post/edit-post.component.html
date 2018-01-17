@@ -8,11 +8,11 @@
             <form class="form">
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input placeholder="{{vm.post.title}}" ng-model="vm.title" class="form-control" type="text" name="title" required />
+                    <input placeholder="{{vm.post.title}}" ng-model="vm.newTitle" class="form-control" type="text" name="title" />
                     <label for="body">Message</label>
-                    <textarea placeholder="{{vm.post.body}}" ng-model="vm.body" class="form-control" type="text" name="body" rows="4" cols="50"></textarea>
+                    <textarea placeholder="{{vm.post.body}}" ng-model="vm.newBody" class="form-control" type="text" name="body" rows="4" cols="50"></textarea>
                     <label for="user">User</label>
-                    <input placeholder="{{vm.post.user}}" ng-model="vm.user" class="form-control" type="text" name="user" required />
+                    <input placeholder="{{vm.post.user}}" ng-model="vm.newUser" class="form-control" type="text" name="user" />
                 </div>
                 <div class="form-group">
                     <div class="buttons">
