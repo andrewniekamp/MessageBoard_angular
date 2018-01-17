@@ -1,8 +1,32 @@
-<md-content layout-padding class="bg-white">
+<md-content layout-padding>
     <div layout="row" layout-align="center" flex>
-        <md-button class="md-fab md-primary" ui-sref="allPosts">
-            View
-        </md-button>
+        <form name="loginForm">
+        <md-content layout-padding layout-align="center center">
+            <md-card flex-gt-sm="50" class="center">
+                <img ng-src="/images/pencils.jpg" class="md-card-image login-image" alt="Colorful pencils">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Welcome</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content>
+                        <section layout-gt-sm="row" layout-align="center center">
+                            <md-input-container>
+                                <label>Email</label>
+                                <input ng-model="user.email" type="email" required>
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Password</label>
+                                <input ng-model="user.password" type="password" required>
+                            </md-input-container>
+                        </section>
+                    </md-card-content>
+                    <md-card-actions layout="column" layout-align="start">
+                            <md-button ui-sref="allPosts" class="md-raised md-primary" ng-disabled="loginForm.$invalid">Log In</md-button>
+                    </md-card-actions>
+                </md-card>
+            </md-content>
+        </form>
     </div>
     <div>
         <add-post></add-post>
