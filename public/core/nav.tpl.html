@@ -1,0 +1,18 @@
+<div ng-cloak>
+    <md-content class="md-padding">
+        <md-nav-bar md-no-ink-bar="true" nav-bar-aria-label="navigation links">
+            <md-nav-item ui-sref="home" md-nav-click="home" name="home">
+                Home
+            </md-nav-item>
+            <md-nav-item ui-sref="allPosts" md-nav-click="allPosts" name="posts">
+                Posts
+            </md-nav-item>
+        </md-nav-bar>
+        
+        <div class="ext-content">
+            External content for `
+            <span>{{currentNavItem}}</span>`.
+        </div>
+
+    </md-content>
+</div>
