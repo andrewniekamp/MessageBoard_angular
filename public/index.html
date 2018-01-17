@@ -12,17 +12,9 @@
   <body ng-app="app" ng-cloak>
 
     <div ng-include="'/core/nav.tpl.html'"></div>
-
-    <md-content layout-padding class="bg-white">
-        <div layout="row" layout-align="center" flex>
-            <md-button class="md-fab md-primary" ui-sref="home">
-                Home
-            </md-button>
-        </div>
-    </md-content>
-
     
-    <ui-view></ui-view>
+    <!-- ui-view is in the nav template -->
+    <!-- <ui-view></ui-view> -->
 
     <script src="/angular.js"></script>
     <script src="/angular-ui-router.min.js"></script>

@@ -2,10 +2,10 @@
     'use strict';
 
     angular.module('app.core')
-    .config(function($stateProvider, $locationProvider) {
+    .config(function($stateProvider, $locationProvider, $urlRouterProvider) {
         var homeState = {
             name: "home",
-            url: "",
+            url: "/",
             component: "home"
         };
         var allPostsState = {
@@ -15,12 +15,17 @@
         };
         var singlePostState = {
             name: "singlePost",
-            url: "/posts/{id}",
+            url: "/posts/{id[^\/]+}",
             component: "singlePost"
         };
         $stateProvider.state(homeState);
         $stateProvider.state(allPostsState);
         $stateProvider.state(singlePostState);
-        $locationProvider.html5Mode(true);
+        // Had attempted to remove #! from url,
+        // Caused issue with page refresh adding '/'
+        // Which would give an empty string as param
+        // Example: posts/ would go to an empty post
+        // $locationProvider.html5Mode(true);
+        $urlRouterProvider.otherwise("/");
     });
 }());
