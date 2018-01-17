@@ -3,7 +3,7 @@
     .component('addPost', {
         templateUrl: '/posts/add-post/add-post.component.html',
         controllerAs: 'vm',
-        controller: function(posts, $state) {
+        controller: function(posts, toast, $state) {
             var vm = this;
             vm.addPost = function() {
                 var newPost = {
@@ -15,6 +15,7 @@
                 posts.add(newPost)
                 .then(function() {
                     $state.go('allPosts');
+                    toast.makeToast('Post added!');
                 });
             };
         }

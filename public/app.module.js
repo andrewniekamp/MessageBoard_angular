@@ -7,6 +7,7 @@
 
         //Other
         'app.home',
-        'app.posts'
+        'app.posts',
+        'app.toast'
     ]);
 }());
