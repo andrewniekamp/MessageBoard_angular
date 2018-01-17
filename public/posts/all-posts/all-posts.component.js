@@ -12,7 +12,9 @@
                         post.date = moment(post.date).format('MMM. DD, YYYY HH:MM:SS');
                     });
                     vm.posts = response;
-                    vm.tableParams = new NgTableParams({}, { dataset: vm.posts});
+                    vm.tableParams = new NgTableParams({
+                        sorting : { date : 'desc' }
+                    }, { dataset: vm.posts });
                 });
             };
         }
