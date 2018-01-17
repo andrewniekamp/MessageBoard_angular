@@ -1,17 +1,14 @@
 <div ng-cloak>
-
     <md-content layout-padding>
-
         <h1>Title: {{vm.post.title}}</h1>
         <md-divider></md-divider>
         <p class="single-post-text">By: {{vm.post.user}}</p>
         <h5 class="single-post-text">Last Updated: {{vm.post.date}}</h5>
+        <md-divider></md-divider>
         <p class="single-post-text">{{vm.post.body}}</p>
 
+        <div class="center">
+            <edit-post post="vm.post"></edit-post>
+        </div>
     </md-content>
-
-    <div class="center">
-        <edit-post post="vm.post"></edit-post>
-    </div>
-
 </div>
