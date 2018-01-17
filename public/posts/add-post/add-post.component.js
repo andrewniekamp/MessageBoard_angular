@@ -14,7 +14,8 @@
                 };
                 posts.add(newPost)
                 .then(function() {
-                    $state.go('allPosts');
+                    // $state.go('allPosts');
+                    $state.reload();
                     toast.makeToast('Post added!');
                 });
             };
