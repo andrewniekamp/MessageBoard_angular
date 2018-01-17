@@ -8,12 +8,21 @@
             controllerAs: 'vm',
             controller: function (posts, $state) {
                 var vm = this;
+                vm.isFormOpen = false;
+                vm.$onChanges = function($changesObj) {
+                    // console.log(vm.post);
+                    if($changesObj === vm.post) {
+                        vm.originalPost = Object.create({}, vm.post);
+                    }
+                    // else console.log($changesObj)
+                    // vm.originalPost = Object.create({}, vm.post);
+                };
                 vm.editPost = function () {
                     var editedPost = {
                         id: vm.post.id,
-                        title: vm.newTitle || vm.title,
-                        body: vm.newBody || vm.body,
-                        user: vm.newUser || vm.user,
+                        title: vm.post.title,
+                        body: vm.post.body,
+                        user: vm.post.user,
                         date: Date.now()
                     };
                     posts.update(editedPost)
@@ -21,6 +30,12 @@
                             $state.go('allPosts');
                         });
                 };
+                vm.cancelUpdate = function() {
+                    $state.reload();
+                };
+                vm.toggle = function() {
+                    vm.isFormOpen = !vm.isFormOpen;
+                }
             }
         });
 }());
