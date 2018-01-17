@@ -49,12 +49,14 @@ const createApp = () => {
 
   // static file-serving middleware
   app.use(express.static(path.join(__dirname, '..', 'public')))
+  app.use(express.static(path.join(__dirname, '..', 'node_modules', 'bootstrap', 'dist', 'css')))
   app.use(express.static(path.join(__dirname, '..', 'node_modules', 'angular')))
   app.use(express.static(path.join(__dirname, '..', 'node_modules', '@uirouter', 'angularjs', 'release')))
   app.use(express.static(path.join(__dirname, '..', 'node_modules', 'angular-animate')))
   app.use(express.static(path.join(__dirname, '..', 'node_modules', 'angular-aria')))
   app.use(express.static(path.join(__dirname, '..', 'node_modules', 'angular-material')))
   app.use(express.static(path.join(__dirname, '..', 'node_modules', 'angular-messages')))
+  app.use(express.static(path.join(__dirname, '..', 'node_modules', 'ng-table', 'bundles')))
   app.use(express.static(path.join(__dirname, '..', 'node_modules', 'moment')))
 
   // any remaining requests with an extension (.js, .css, etc.) send 404

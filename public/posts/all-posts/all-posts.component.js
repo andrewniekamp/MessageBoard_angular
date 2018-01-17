@@ -3,7 +3,7 @@
     .component('allPosts', {
         templateUrl: '/posts/all-posts/all-posts.component.html',
         controllerAs: 'vm',
-        controller: function(posts) {
+        controller: function(posts, NgTableParams) {
             var vm = this;
             vm.sort = '';
             vm.$onInit = function() {
@@ -13,6 +13,7 @@
                         post.date = moment(post.date).format('MMM. DD, YYYY HH:MM:SS');
                     });
                     vm.posts = response;
+                    vm.tableParams = new NgTableParams({}, { dataset: vm.posts});
                 });
             };
         }

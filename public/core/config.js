@@ -15,7 +15,7 @@
         };
         var singlePostState = {
             name: "singlePost",
-            url: "/posts/{id[^\/]+}",
+            url: "/posts/{id}",
             component: "singlePost"
         };
         $stateProvider.state(homeState);

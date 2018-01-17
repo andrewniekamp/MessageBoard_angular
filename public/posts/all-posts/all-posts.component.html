@@ -1,16 +1,56 @@
-<md-content ng-cloak>
-    <md-list flex>
-        <md-divider></md-divider>
-        <a ng-repeat="post in vm.posts" ui-sref="singlePost({ id: post.id })">
-            <md-list-item class="md-3-line" ng-click="null">
-            <div class="md-list-item-text" layout="column">
-                <h3>{{ post.title }}</h3>
-                <h4>{{ post.user }}</h4>
-                <p>Last Update: {{post.date}}</p>
-                <p># of comments placeholder</p>
-            </div>
-            <md-divider></md-divider>
-        </md-list-item>
-        </a>
-    </md-list>
-</md-content>
+<div ng-cloak>
+    <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <!-- Tab with list format -->
+            <md-tab label="List">
+                <md-content class="md-padding">
+                    <h1 class="md-display-2">List of Posts</h1>
+                    <md-content ng-cloak>
+                        <md-list flex>
+                            <md-divider></md-divider>
+                            <a ng-repeat="post in vm.posts" ui-sref="singlePost({ id: post.id })">
+                                <md-list-item class="md-3-line" ng-click="null">
+                                    <div class="md-list-item-text" layout="column">
+                                        <h3>{{ post.title }}</h3>
+                                        <h4>{{ post.user }}</h4>
+                                        <p>Last Update: {{post.date}}</p>
+                                        <p># of comments placeholder</p>
+                                    </div>
+                                    <md-divider></md-divider>
+                                </md-list-item>
+                            </a>
+                        </md-list>
+                    </md-content>
+                </md-content>
+            </md-tab>
+            <!-- Tab with table format -->
+            <md-tab label="Table">
+                <md-content class="md-padding">
+                    <h1 class="md-display-2">Table of Posts</h1>
+                    <table ng-table="vm.tableParams" class="table" show-filter="true">
+                        <tr ng-repeat="post in $data">
+                            <td title="'Title'" filter="{ title: 'text'}" sortable="'title'">
+                                <a ui-sref="singlePost({ id: post.id })">{{post.title}}</a>
+                            </td>
+                            <td title="'User'" filter="{ user: 'text'}" sortable="'user'">
+                                {{post.user}}
+                            </td>
+                            <td title="'Date'" filter="{ date: 'text'}" sortable="'date'">
+                                {{post.date}}
+                            </td>
+                        </tr>
+                    </table>
+                </md-content>
+            </md-tab>
+            <md-tab label="three">
+                <md-content class="md-padding">
+                    <h1 class="md-display-2">Tab Three</h1>
+                    <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie
+                        dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere
+                        mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam,
+                        congue eu enim scelerisque, finibus commodo lectus.</p>
+                </md-content>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>

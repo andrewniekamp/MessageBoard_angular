@@ -3,6 +3,7 @@
 
     angular.module('app.core', [
         'ui.router',
-        'ngMaterial'
+        'ngMaterial',
+        'ngTable'
     ]);
 }());

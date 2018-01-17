@@ -310,4 +310,7 @@ md-content h1:first-child {
   margin-top: 0;
 }
 
-.login-image {}
+/* ng-table class!! */
+.ng-table-counts {
+  margin: 20px 0;
+}
