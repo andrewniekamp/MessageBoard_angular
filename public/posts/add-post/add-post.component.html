@@ -5,11 +5,17 @@
                 <label>User</label>
                 <!-- Need to manually reset the form -->
                 <input name="user" ng-model="vm.user" required>
+                <div ng-messages="loginForm.user.$error">
+                    <div ng-message="required">You have to identify yourself!</div>
+                </div>
             </md-input-container>
             <md-input-container class="md-block" flex-gt-xs>
                 <label>Title</label>
                 <!-- Need to manually reset the form -->
                 <input name="title" ng-model="vm.title" required>
+                <div ng-messages="loginForm.title.$error">
+                    <div ng-message="required">Your post needs a title!</div>
+                </div>
             </md-input-container>
         </div>
         <div layout-gt-xs="row">
@@ -17,6 +23,9 @@
                 <label>Body</label>
                 <!-- Need to manually reset the form -->
                 <textarea name="body" ng-model="vm.body" required></textarea>
+                <div ng-messages="loginForm.body.$error">
+                    <div ng-message="required">You're trying to post nothing??</div>
+                </div>
             </md-input-container>
         </div>
             <div class="md-actions">

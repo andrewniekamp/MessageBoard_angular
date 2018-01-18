@@ -14,11 +14,17 @@
                 <label>User</label>
                 <!-- Need to manually reset the form -->
                 <input name="user" ng-model="vm.post.user" required>
+                <div ng-messages="editPostForm.user.$error">
+                    <div ng-message="required">You cannot simply remove the user!</div>
+                </div>
             </md-input-container>
             <md-input-container class="md-block" flex-gt-xs>
                 <label>Title</label>
                 <!-- Need to manually reset the form -->
                 <input name="title" ng-model="vm.post.title" required>
+                <div ng-messages="editPostForm.title.$error">
+                    <div ng-message="required">You cannot simply remove the title!</div>
+                </div>
             </md-input-container>
         </div>
         <div layout-gt-xs="row">
@@ -26,6 +32,9 @@
                 <label>Body</label>
                 <!-- Need to manually reset the form -->
                 <textarea name="body" ng-model="vm.post.body" required></textarea>
+                <div ng-messages="editPostForm.body.$error">
+                    <div ng-message="required">You cannot simply remove the post!</div>
+                </div>
             </md-input-container>
         </div>
         <div class="md-actions">
