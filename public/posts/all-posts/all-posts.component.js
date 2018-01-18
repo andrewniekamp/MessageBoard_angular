@@ -9,7 +9,7 @@
                 posts.getAll()
                 .then(function(response) {
                     response.forEach(function(post) {
-                        post.date = moment(post.date).format('MMM. DD, YYYY HH:MM:SS');
+                        post.date = moment(post.date).format('MMM. DD, YYYY h:mm:ss a');
                     });
                     vm.posts = response;
                     vm.tableParams = new NgTableParams({
